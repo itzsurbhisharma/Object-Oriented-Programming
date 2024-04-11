@@ -1,0 +1,45 @@
+#include<iostream.h>
+#include<conio.h>
+class space
+{
+		int x;
+		int y;
+		int z;
+	public:
+		void getdata(int a,int b, int c);
+		void display(void);
+		void operator -();
+};
+void space :: getdata(int a,int b,int c)
+{
+	x=a;
+	y=b;
+	z=c;
+}
+void space :: display(void)
+{
+	cout<< x<<" ";
+	cout<<y<<" ";
+	cout<<z<<" "<<endl;
+}
+void space :: operator -()
+{
+	x=-x;
+	y=-y;
+	z=-z;
+}
+void main()
+{
+	space S;
+	clrscr();
+	S.getdata(10,-20,30);
+	cout<<" S"<<endl;
+	S.display();
+	-S;
+	cout<<" S"<<endl;
+	S.display();
+	getch();
+}
+
+
+

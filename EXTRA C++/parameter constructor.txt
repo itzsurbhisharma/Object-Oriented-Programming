@@ -1,0 +1,47 @@
+ /* Paramtrerized constructo*/
+ #include<iostream.h>
+ #include<conio.h>
+ class table
+ {
+	private:
+		int n,m,i;
+	public:
+		table(int,int);
+		void display(void);
+ };
+  table::table(int x,int y)
+ {
+     n=x;
+     m=y;
+ }
+ void table::display()
+ {
+	cout<<endl;
+	for(i=1;i<=n;i++)
+	{
+		cout<<m*i<<"\t";
+	}
+ }
+ void main()
+ {
+	clrscr();
+	int a,b;
+	cout<<"Enter a:-";
+	cin>>a;
+	cout<<"Enter value for series:-";
+	cin>>b;
+	table ob1(a,b);
+	int x,y;
+	cout<<"Enter x:-";
+	cin>>x;
+	cout<<"Enter value for series:-";
+	cin>>y;
+	table ob2=table(x,y);
+	cout<<"\nFor object1:-\n";
+	ob1.display();
+	cout<<"For object2:-\n";
+	ob2.display();
+	getch();
+ }
+
+

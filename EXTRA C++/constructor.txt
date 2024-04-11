@@ -1,0 +1,34 @@
+ /*A program for implemention of constructor */
+ #include<iostream.h>
+ #include<conio.h>
+ class si
+ {
+	private:
+		float p,r,t,si;
+	public:
+		si()
+		{
+			cout<<"Enter the value of Principle:-";
+			cin>>p;
+			cout<<"Enter the value of Rate:-";
+			cin>>r;
+			cout<<"Enter the value of Time:-";
+			cin>>t;
+		 }
+		  calculate()
+		 {
+			si=(p*r*t)/100;
+		 }
+		 void display()
+		 {
+			cout<<"Rhe simple Interest is:- "<<si;
+		 }
+ };
+ void main()
+ {
+	clrscr();
+	si ob;
+	ob.calculate();
+	ob.display();
+	getch();
+ }

@@ -1,0 +1,45 @@
+#include<iostream.h>
+#include<conio.h>
+class fact
+{
+	private:
+		long int factr[10];
+		int n;
+	public:
+		void act(int);
+		void display(void);
+};
+void fact::act(int a)
+{
+	n=a;
+       //	factr=1;
+	for(int i=1;i<=n;i++)
+	{
+		factr[i-1]=1;
+		for(int j=1;j<=i;j++)
+		{
+			factr[i-1]=factr[i-1]*j;
+		}
+	}
+	//return factr;
+}
+void fact :: display(void)
+{
+	for(int i=0;i<n;i++)
+	{
+		cout<<"Factorial of  "<<i+1<< " is:- "<<factr[i]<<endl;
+	}
+}
+void main()
+{
+	clrscr();
+	fact ob;
+	//int res;
+	cout<<"Enter the no for factorial:-";
+	int m;
+	cin>>m;
+	ob.act(m);
+	ob.display();
+	//cout<<endl<<res;
+	getch();
+}

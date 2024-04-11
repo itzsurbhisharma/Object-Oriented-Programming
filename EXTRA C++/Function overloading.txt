@@ -1,0 +1,44 @@
+/*Function Overloading*/
+#include<iostream.h>
+#include<conio.h>
+int add(int);
+int add(int,int);
+float add(int,float);
+float add(float,int);
+float add(float,float);
+void main()
+{
+	clrscr();
+	cout<<"Enter two integer value:-";
+	int a,b;
+	cin>>a>>b;
+	cout<<"Enter two float value:-";
+	float x,y;
+	cin>>x>>y;
+	cout<<"\nThe addtion is:-"<<add(a);
+	cout<<"\nThe addtion is:-"<<add(a,b);
+	cout<<"\nThe addtion is:-"<<add(a,x);
+	cout<<"\nThe addtion is:-"<<add(y,b);
+	cout<<"\nThe addtion is:-"<<add(x,y);
+	getch();
+}
+int add(int m)
+{
+	return m+m;
+}
+int add(int m,int n)
+{
+	return m+n;
+}
+float add(int m,float n)
+{
+	return m+n;
+}
+float add(float m,int n)
+{
+	return m+n;
+}
+float add(float m,float n)
+{
+	return m+n;
+}

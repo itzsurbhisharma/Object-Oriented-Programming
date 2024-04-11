@@ -1,0 +1,47 @@
+/* array of object*/
+#include<iostream.h>
+#include<conio.h>
+class player
+{
+  char name[15];
+  int match;
+  float avg;
+  public:
+	void getdata();
+	void display();
+};
+	void player::getdata()
+	{
+		cout<<endl;
+		cout<<"Enter the player name:-";
+		cin>>name;
+		cout<<"Enter the how many match played:-";
+		cin>>match;
+		cout<<"Enter the batting average :-";
+		cin>>avg;
+	}
+	void player ::display()
+	{
+		cout<<"Player Name:- "<<name<<endl;
+		cout<<"Total match:- "<<match<<endl;
+		cout<<"Average    :- "<<avg<<endl;
+	}
+void main()
+{
+  clrscr();
+  int n;
+  cout<<"Enter how many record you want to create:-";
+ cin>>n;
+  player ob[15];
+  for(int i=1;i<=n;i++)
+  {
+      ob[i].getdata();
+  }
+  clrscr();
+  for(i=1;i<=n;i++)
+  {
+      ob[i].display();
+      cout<<endl<<endl;
+  }
+     getch();
+  }

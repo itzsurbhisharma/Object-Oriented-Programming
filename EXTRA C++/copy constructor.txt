@@ -1,0 +1,42 @@
+	#include<iostream.h>
+	#include<conio.h>
+	class code
+	{
+		private:
+			int id;
+		public:
+			code()
+			{
+
+			}
+			code(int a)
+			{
+				id=a;
+			}
+			code(code &s)//copy constructor
+			{
+				id=s.id;
+			}
+			void display(void)
+			{
+				cout<<id;
+			}
+	};
+	void main()
+	{
+		clrscr();
+		code A(100);
+		code B(A); //copy constructor called
+		code C=A;//copy constructor called again
+		code D;
+		D=A;
+		cout<<"\n id of A:";
+		A.display();
+		cout<<"\n id of B:";
+		B.display();
+		cout<<"\n id of C:";
+		C.display();
+		cout<<"\n id of D:";
+		D.display();
+		getch();
+	}

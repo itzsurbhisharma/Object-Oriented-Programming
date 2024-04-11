@@ -1,0 +1,43 @@
+/*constructor overloading*/
+#include<iostream.h>
+#include<conio.h>
+class add
+{
+	       private:
+			int a,b,c;
+	       public:
+		add()
+		{
+			a=5;
+			b=5;
+			c=a+b;
+		}
+		add(int m)
+		{
+			a=m;
+			b=10;
+			c=a+b;
+		}
+		add(int m,int n)
+		{
+			a=m;
+			b=n;
+			c=a+b;
+		}
+		void display()
+		{
+			cout<<"The addition is :-"<<c;
+		}
+};
+void main()
+{
+	clrscr();
+	add ob1,ob2(5),ob3(10,10);
+	cout<<"\nFor object 1:-";
+	ob1.display();
+	cout<<"\nFor object 2:-";
+	ob2.display();
+	cout<<"\nFor object 3:-";
+	ob3.display();
+	getch();
+}

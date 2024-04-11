@@ -1,0 +1,39 @@
+/*a program for addition of two no thats giving
+ the function defination outside the class using scope resolution opt*/
+#include<iostream.h>
+#include<conio.h>
+class add
+{
+	private:
+		int a,b,c;
+	public:
+		void getdata();
+		void calculate();
+		void display();
+};
+void add::getdata()
+{
+	cout<<"Enter the value of a:-";
+	cin>>a;
+	cout<<"Enter the value of b:-";
+	cin>>b;
+}
+void add::calculate()
+{
+	c=a+b;
+}
+void add::display()
+{
+	cout<<"The addition of "<<a<<" and "<<b<<" is:- "<<c;
+}
+void main()
+{
+     clrscr();
+     add ob;
+     ob.getdata();
+     ob.calculate();
+     ob.display();
+     getch();
+}
+
+

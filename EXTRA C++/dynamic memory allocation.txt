@@ -1,0 +1,27 @@
+/*dynamic memory allocation*/
+#include<iostream.h>
+#include<conio.h>
+struct Student
+{
+	char nm[10];
+	int rollno;
+	float per;
+};
+void main()
+{
+	clrscr();
+	Student *st;
+	st=new Student;
+	cout<<"Enter the Name of student:-";
+	cin>>st->nm;
+	cout<<"Enter the Rollno of student:-";
+	cin>>st->rollno;
+	cout<<"Enter the Percentage of student:-";
+	cin>>st->per;
+	cout<<endl;
+	cout<<"Name:-"<<st->nm<<endl;
+	cout<<"Roll no:-"<<st->rollno<<endl;
+	cout<<"Percentage:-"<<st->per<<endl;
+	delete st;
+	getch();
+}

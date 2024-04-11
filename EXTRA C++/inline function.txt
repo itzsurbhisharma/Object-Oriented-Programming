@@ -1,0 +1,20 @@
+/*a program for find the square of a no using inline function*/
+#include<iostream.h>
+#include<conio.h>
+inline int sqre(int x)
+{
+	return(x*x);
+}
+void main()
+{
+	clrscr();
+	cout<<"\nEnter a no.:-";
+	int n;
+	cin>>n;
+	cout<<"The square of no. is:-"<<sqre(n)<<"\n";
+	cout<<"\nEnter a another no.:-";
+	int m;
+	cin>>m;
+	cout<<"The square of no. is:-"<<sqre(m)<<"\n";
+	getch();
+}

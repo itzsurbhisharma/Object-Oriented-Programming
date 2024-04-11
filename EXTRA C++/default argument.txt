@@ -1,0 +1,38 @@
+/default argument*/
+#include<iostream.h>
+#include<conio.h>
+void add(int a=10,int b=15,int c=20);
+void print(char ch='*',int len=20);
+void main()
+{
+	clrscr();
+	int x,y,z;
+	char ch;
+	cout<<"Enter the value of x:-";
+	cin>>x;
+	cout<<"Enter the value of y:-";
+	cin>>y;
+	cout<<"Enter the value of z:-";
+	cin>>z;
+	add();
+	print();
+	add(x);
+	print(ch='&');
+	add(x,y);
+	print(ch='#');
+	add(x,y,z);
+	getch();
+}
+void add(int p,int q,int s)
+{
+ int t;
+ t=p+q+s;
+ cout<<"\nThe addtion is-"<<t<<endl;
+}
+void print(char ch,int len)
+{
+	for(int i=1;i<=len;i++)
+	{
+		cout<<ch;
+	}
+}

@@ -1,0 +1,36 @@
+/*Destructor*/
+#include<iostream.h>
+#include<conio.h>
+int count=0;
+class alpha
+{
+
+	public:
+		alpha()
+		{
+			count++;
+			cout<<"\n No.of object created:-"<<count;
+		}
+		~alpha()
+		{
+			cout<<"\n No. of object detroyed:-"<<count;
+			count--;
+		}
+};
+void main()
+{
+	clrscr();
+	cout<<"\nENTER MAIN\n";
+	alpha A1,A2,A3,A4;
+	{
+		cout<<"\nENTER BLOCK1\n";
+		alpha A5;
+	}
+	{
+			cout<<"\nENTER BLOCK2\n";
+		alpha A6;
+	}
+	cout<<"\n RE ENTER MAIN\n";
+	getch();
+}
+

@@ -1,0 +1,67 @@
+/*Nested class*/
+#include<iostream.h>
+#include<stdio.h>
+#include<conio.h>
+#include<iomanip.h>
+class college
+{
+	char name[25];
+	char unis[25];
+	public:
+
+		void getdata();
+		void display();
+};
+class student
+{
+	int st1,st2,st3,add;
+	public:
+		void getdata();
+		void display();
+		void calculate();
+		college c;
+};
+void college::getdata()
+{
+
+	cout<<"Enter the college name:-";
+	gets(name);
+	cout<<"Enter the university name:-";
+	gets(unis);
+}
+void college::display()
+{
+	cout<<endl;
+	cout<<setw(20)<<"College Name:-"<<setw(25)<<name<<endl;
+	cout<<setw(20)<<"University Name:-"<<setw(25)<<unis;
+}
+void student::getdata()
+{
+	cout<<"Enter the no of student in BCA I year:-";
+	cin>>st1;
+	cout<<"Enter the no of student in BCA II year:-";
+	cin>>st2;
+	cout<<"Enter the no of student in BCA III year:-";
+	cin>>st3;
+	//add=st1+st2+st3;
+}
+void student::calculate()
+{
+	add=st1+st2+st3;
+}
+void student::display()
+{
+	cout<<endl;
+	cout<<setw(20)<<"Total BCA Student:-"<<setw(25)<<add;
+}
+void main()
+{
+	clrscr();
+	student s;
+	s.c.getdata();
+	s.getdata();
+	s.c.display();
+	s.calculate();
+	s.display();
+	getch();
+}

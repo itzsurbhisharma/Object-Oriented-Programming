@@ -1,0 +1,37 @@
+/*Implemention of Manipulators*/
+ #include<iostream.h>
+ #include<conio.h>
+ #include<iomanip.h>
+ class student
+ {
+	private:
+		char name[10];
+		int rollno;
+		float per;
+	public:
+		void getdata()
+		{
+			cout<<"Enter the student name:-";
+			cin>>name;
+			cout<<"Enter the roll no:-";
+			cin>>rollno;
+			cout<<"Enter the student percentage :-";
+			cin>>per;
+		}
+		void display()
+		{
+			cout<<endl<<endl<<setw(15)<<"Name:-"<<setw(10)<<name;
+			cout<<endl<<endl<<setw(15)<<"Roll no:-"<<setw(10)<<rollno;
+			cout<<endl<<endl<<setw(15)<<"Percentage:-"<<setw(10)<<per<<"%d";
+			}
+ };
+ void main()
+ {
+	clrscr();
+	student ob;
+	ob.getdata();
+	ob.display();
+	getch();
+ }
+
+

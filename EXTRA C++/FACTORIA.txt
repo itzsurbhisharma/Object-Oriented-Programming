@@ -1,0 +1,24 @@
+/*Program of Factorial using Recursion*/
+#include<iostream.h>
+#include<conio.h>
+void main ()
+{
+	int n;
+	long int result;
+	int factorial (int);
+	clrscr ();
+	cout<<"\n Enter a no:-";
+	cin>>n;
+	result=factorial (n);
+	cout<<"\n Factorial="<<result;
+	getch ();
+}
+factorial (int m)
+{
+	int fact;
+	if (m==0)
+		return (1);
+	else
+		fact=m*factorial (m-1);
+	return (fact);
+}

@@ -1,0 +1,55 @@
+/*Single Inheritance:Public*/
+#include<iostream.h>
+#include<conio.h>
+class B
+{
+	int a;
+	public:
+		int b;
+		void getdata();
+		int setdata();
+		void show();
+};
+class D:public B
+{
+	int c;
+	public:
+		void mul(void);
+		void display(void);
+};
+void B::getdata()
+{
+	a=5;b=10;
+}
+int B::setdata()
+{
+	return a;
+}
+void B::show()
+{
+	cout<<"a="<<a<<"\n";
+}
+void D::mul()
+{
+	c=b*setdata();
+}
+void D::display()
+{
+	cout<<"a="<<setdata()<<"\n";
+	cout<<"b="<<b<<"\n";
+	cout<<"c="<<c<<"\n\n";
+}
+void main()
+{
+	clrscr();
+	D d;
+	d.getdata();
+	d.mul();
+	d.show();
+	d.display();
+	d.b=20;
+	d.mul();
+	d.display();
+	getch();
+}
+

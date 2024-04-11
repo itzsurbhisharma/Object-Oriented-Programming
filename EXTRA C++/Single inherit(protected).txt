@@ -1,0 +1,52 @@
+/*Single Inherite:(protected)*/
+#include<iostream.h>
+#include<conio.h>
+class base
+{
+	private:
+		int a,b;
+	protected:
+		int x,y;
+	public:
+		void getdata()
+		{
+			cout<<"Enter the value of a:-";
+			cin>>a;
+			cout<<"Enter the value of b:-";
+			cin>>b;
+			cout<<"Enter the value of x:-";
+			cin>>x;
+			cout<<"Enter the value of d:-";
+			cin>>y;
+		}
+		void display()
+		{
+			cout<<"  A:-  "<<a<<endl;
+			cout<<"  B:-  "<<b<<endl;
+			cout<<"  X:-  "<<x<<endl;
+			cout<<"  Y:-  "<<y<<endl;
+		}
+};
+class derived : public base
+{
+	public:
+		void setdata()
+		{
+			cout<<" *******************************";
+		       //	cout<<"  A:-  "<<a<<endl;
+		       //	cout<<"  B:-  "<<b<<endl;
+			cout<<endl<<"  X:-  "<<x<<endl;
+			cout<<"  Y:-  "<<y<<endl;
+		}
+};
+void main()
+{
+	clrscr();
+	derived ob;
+	base ob1;
+	ob.getdata();
+	ob.display();
+	ob.setdata();
+	getch();
+}
+

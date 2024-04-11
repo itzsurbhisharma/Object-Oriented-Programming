@@ -1,0 +1,49 @@
+/* freind function for two class*/
+#include<iostream.h>
+#include<conio.h>
+class XYZ;
+class ABC
+{
+	int a;
+	public:
+		void setdata()
+		{
+			cout<<"Enter the value of a:-";
+			cin>>a;
+		}
+		friend int max(ABC m,XYZ n);
+};
+class XYZ
+{
+	int a;
+	public:
+		void setdata()
+		{
+			cout<<"Enter the value of a:-";
+			cin>>a;
+		}
+		friend int  max(ABC m,XYZ n);
+};
+int  max(ABC m,XYZ n)
+{
+	if(m.a>n.a)
+	{
+		return m.a;
+
+	}
+	else
+	{
+		return n.a;
+	}
+}
+void main()
+{
+	clrscr();
+	ABC abc;
+	XYZ xyz;
+	abc.setdata();
+	xyz.setdata();
+	int p=max(abc,xyz);
+	cout<<"Maxinum no is:-"<<p;
+	getch();
+}
